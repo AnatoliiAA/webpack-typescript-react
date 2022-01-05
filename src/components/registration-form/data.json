@@ -1,0 +1,110 @@
+{
+  "inputs": [
+    {
+      "name": "storeName",
+      "type": "text",
+      "id": "store-name",
+      "placeholder": "Store Name",
+      "testId": "store-name",
+      "rules": {
+        "required": "This field is required.",
+        "minLength": {
+          "value": 2,
+          "message": "Name should contain 2 characters or more"
+        }
+      }
+    },
+    {
+      "name": "industry",
+      "type": "select",
+      "id": "industry",
+      "placeholder": "Industry",
+      "testId": "industry",
+      "options": [
+        { "value": "health", "label": "Health" },
+        { "value": "oil", "label": "Oil" },
+        { "value": "ai", "label": "Artificial Intelligence" }
+      ]
+    },
+    {
+      "name": "isRegistered",
+      "type": "checkbox",
+      "id": "is-registered",
+      "testId": "is-registered",
+      "labelText": "This store is registered business",
+      "rules": { "required": "This field is required." }
+    },
+    {
+      "name": "legalName",
+      "type": "text",
+      "id": "legal-name",
+      "placeholder": "Company Legal Name",
+      "testId": "legal-name",
+      "rules": {
+        "required": "This field is required.",
+        "minLength": {
+          "value": 2,
+          "message": "Legal Name should contain 2 characters or more"
+        }
+      }
+    },
+    {
+      "name": "vatNumber",
+      "type": "text",
+      "id": "vat-number",
+      "placeholder": "VAT EU Number",
+      "testId": "vat-number"
+    },
+    {
+      "name": "address",
+      "type": "text",
+      "id": "address",
+      "placeholder": "Address",
+      "testId": "address",
+      "rules": {
+        "required": "This field is required.",
+        "minLength": {
+          "value": 2,
+          "message": "Address should contain 2 characters or more"
+        }
+      }
+    },
+    {
+      "name": "zipCode",
+      "type": "text",
+      "id": "zip-code",
+      "placeholder": "ZIP Code",
+      "testId": "zip-code",
+      "width": "30%",
+      "rules": { "required": "This field is required." }
+    },
+    {
+      "name": "city",
+      "type": "text",
+      "id": "city",
+      "placeholder": "City",
+      "testId": "city",
+      "width": "60%",
+      "rules": {
+        "required": "This field is required.",
+        "minLength": {
+          "value": 2,
+          "message": "City name should contain 2 characters or more"
+        }
+      }
+    },
+    {
+      "name": "country",
+      "type": "select",
+      "id": "country",
+      "placeholder": "Country",
+      "testId": "country",
+      "rules": { "required": "This field is required." },
+      "options": [
+        { "value": "ukraine", "label": "Ukraine" },
+        { "value": "poland", "label": "Poland" },
+        { "value": "slovakia", "label": "Slovakia" }
+      ]
+    }
+  ]
+}

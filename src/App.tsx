@@ -1,11 +1,11 @@
 import * as React from "react";
-import { injectGlobal } from "@emotion/css";
-import './helpers/reset-css';
+import { RegistrationPage } from "./components/registration-page/RegistrationPage";
+import { Global } from "@emotion/react";
+import { reset, global } from "./theme";
 
-injectGlobal`
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
-`;
-
-
-
-export const App = (): JSX.Element => <div></div>;
+export const App = (): JSX.Element => (
+  <div>
+    <Global styles={[reset, global]}></Global>
+    <RegistrationPage />
+  </div>
+);

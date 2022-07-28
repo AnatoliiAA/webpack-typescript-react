@@ -1,46 +1,45 @@
+const selectors = {
+  storeName: '[data-testid="store-name"]',
+  industry: '[data-testid="industry"]',
+  isRegistered: '[data-testid="is-registered"]',
+  legalName: '[data-testid="legal-name"]',
+  vatNumber: '[data-testid="vat-number"]',
+  address: '[data-testid="address"]',
+  zipCode: '[data-testid="zip-code"]',
+  city: '[data-testid="city"]',
+  country: '[data-testid="country"]',
+  submit: '[data-testid="submit-button"]',
+  storeNameError: '[data-testid="store-name"] ~ p',
+  isRegisteredError: '[data-testid="is-registered"] ~ p',
+  legalNameError: '[data-testid="legal-name"] ~ p',
+  addressError: '[data-testid="address"] ~ p',
+  zipCodeError: '[data-testid="zip-code"] ~ p',
+  cityError: '[data-testid="city"] ~ p',
+  countryError: '[data-testid="country"] ~ p',
+};
+const {
+  submit,
+  storeName,
+  industry,
+  isRegistered,
+  legalName,
+  vatNumber,
+  address,
+  zipCode,
+  city,
+  country,
+  storeNameError,
+  isRegisteredError,
+  legalNameError,
+  addressError,
+  zipCodeError,
+  cityError,
+  countryError,
+} = selectors;
 describe("Registration Form tests", () => {
-  const selectors = {
-    storeName: '[data-testid="store-name"]',
-    industry: '[data-testid="industry"]',
-    isRegistered: '[data-testid="is-registered"]',
-    legalName: '[data-testid="legal-name"]',
-    vatNumber: '[data-testid="vat-number"]',
-    address: '[data-testid="address"]',
-    zipCode: '[data-testid="zip-code"]',
-    city: '[data-testid="city"]',
-    country: '[data-testid="country"]',
-    submit: '[data-testid="submit-button"]',
-    storeNameError: '[data-testid="store-name"] ~ p',
-    isRegisteredError: '[data-testid="is-registered"] ~ p',
-    legalNameError: '[data-testid="legal-name"] ~ p',
-    addressError: '[data-testid="address"] ~ p',
-    zipCodeError: '[data-testid="zip-code"] ~ p',
-    cityError: '[data-testid="city"] ~ p',
-    countryError: '[data-testid="country"] ~ p',
-  };
-  const {
-    submit,
-    storeName,
-    industry,
-    isRegistered,
-    legalName,
-    vatNumber,
-    address,
-    zipCode,
-    city,
-    country,
-    storeNameError,
-    isRegisteredError,
-    legalNameError,
-    addressError,
-    zipCodeError,
-    cityError,
-    countryError,
-  } = selectors;
   beforeEach(() => {
-    cy.visit("http://localhost:3000/");
+    cy.visit("http://localhost:3000");
   });
-
   it("should show 7 errors on submitting empty form", () => {
     cy.get(submit).click();
     cy.get(storeNameError)
@@ -125,9 +124,7 @@ describe("Registration Form tests", () => {
     cy.get(city).type("City");
     cy.get(cityError).should("not.exist");
 
-    cy.get(country)
-      .select("ukraine")
-      .should("contain.text", "Ukraine");
+    cy.get(country).select("ukraine").should("contain.text", "Ukraine");
     cy.get(countryError).should("not.exist");
   });
 

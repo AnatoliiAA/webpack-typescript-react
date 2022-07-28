@@ -9,7 +9,7 @@ exports[`Registration Form Tests snapshot test should match snapshot 1`] = `
     className="css-1qci0n7"
   >
     <label
-      className="css-i7ev4h"
+      className="css-teqmh5"
       htmlFor="store-name"
     />
     <input
@@ -77,7 +77,7 @@ exports[`Registration Form Tests snapshot test should match snapshot 1`] = `
       type="checkbox"
     />
     <label
-      className="css-1r8x9tt"
+      className="css-1qwhpv3"
       htmlFor="is-registered"
     >
       This store is registered business
@@ -87,7 +87,7 @@ exports[`Registration Form Tests snapshot test should match snapshot 1`] = `
     className="css-1qci0n7"
   >
     <label
-      className="css-i7ev4h"
+      className="css-teqmh5"
       htmlFor="legal-name"
     />
     <input
@@ -106,7 +106,7 @@ exports[`Registration Form Tests snapshot test should match snapshot 1`] = `
     className="css-1qci0n7"
   >
     <label
-      className="css-i7ev4h"
+      className="css-teqmh5"
       htmlFor="vat-number"
     />
     <input
@@ -125,7 +125,7 @@ exports[`Registration Form Tests snapshot test should match snapshot 1`] = `
     className="css-1qci0n7"
   >
     <label
-      className="css-i7ev4h"
+      className="css-teqmh5"
       htmlFor="address"
     />
     <input
@@ -145,7 +145,7 @@ exports[`Registration Form Tests snapshot test should match snapshot 1`] = `
     width="30%"
   >
     <label
-      className="css-i7ev4h"
+      className="css-teqmh5"
       htmlFor="zip-code"
     />
     <input
@@ -165,7 +165,7 @@ exports[`Registration Form Tests snapshot test should match snapshot 1`] = `
     width="60%"
   >
     <label
-      className="css-i7ev4h"
+      className="css-teqmh5"
       htmlFor="city"
     />
     <input
